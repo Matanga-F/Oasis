@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Live = () => {
+const Trailers = () => {
   return (
     <View>
-      <Text>Live</Text>
+      <Text>Trailers</Text>
     </View>
   )
 }
 
-export default Live
+export default Trailers
