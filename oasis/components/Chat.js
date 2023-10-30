@@ -1,7 +1,6 @@
 import { View, Text } from 'react-native'
 import React, {useState} from 'react'
-import chat from "./styles/chat.styles"
-
+import chatroom from './styles/chatrom.styles';
 const Chat = () => {
     // const { user } = useContext(appContext);
     const data = [1, 2, 3, 4, 5, 6, 7];
@@ -15,7 +14,7 @@ const Chat = () => {
       duration: 300, // Adjust the duration as needed
     };
   return (
-    <View style={Chat.container}>
+    <View style={chatroom.container}>
         <View>
 
         </View>
