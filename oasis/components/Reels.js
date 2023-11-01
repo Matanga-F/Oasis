@@ -1,24 +1,29 @@
-import { View, Text } from 'react-native';
-// import Video from 'react-native-video';
+import { View, Text, Image} from 'react-native';
 import reel from './styles/reeld.style';
 import React, { useRef, useState } from 'react';
+import { Video } from 'expo-av';
 
 const Reels = () => {
-  const video = useRef(null);
-  const [status, setStatus] = useState({});
-  const vid = require("../asserts/videos/reel.mp4"); // Corrected path
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const image = require("../asserts/images/reels.png")
 
+  const handlePlayPause = async () => {
+    if (isPlaying) {
+      await videoRef.current.pauseAsync();
+    } else {
+      await videoRef.current.playAsync();
+    }
+    setIsPlaying(!isPlaying);
+  };
+  
   return (
     <View style={reel.container}>
-      <Text style={reel.text}>Reels</Text>
-      {/* <Video
-        ref={video}
-        style={reel.video}
-        source={vid} // Corrected source usage
-        resizeMode="cover"
-        shouldPlay
-        isLooping
-      /> */}
+      <View style={reel.innerContainer}>
+          <Text style={reel.text}>Reels</Text>
+          <Image style= {reel.imageBack}  source={image} />
+      </View>
+      
     </View>
   );
 }

@@ -1,18 +1,21 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get('window');
 
 const reel = StyleSheet.create({
-    container:{
-        flex: 1,
-        width: '98%',
-        height: '100%'
+    innerContainer:{
+        width: "100%", // 98% of the screen width
+        height:"100%",
     }, 
-    text:{
+    text: {
         color: 'white',
         fontSize: 20
     },
-    video: {
-        flex: 1,
-      },
-})
+    imageBack: {
+        width: "100%", // 98% of the screen width
+        height:"500%",  // 98% of the screen height
+    },
+   
+});
 
 export default reel;
