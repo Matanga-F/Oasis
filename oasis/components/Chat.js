@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import React, {useState} from 'react'
 import chatroom from './styles/chatrom.styles';
+
 const Chat = () => {
     // const { user } = useContext(appContext);
     const data = [1, 2, 3, 4, 5, 6, 7];

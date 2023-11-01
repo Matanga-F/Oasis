@@ -21,7 +21,7 @@ const Room = () => {
   
     const renderTabs = () => {
       return tabs.map((tab) => (
-        <TouchableOpacity key={tab} onPress={() => handleTabPress(tab)}>
+        <TouchableOpacity key={tab} onPress={() => handleTabPress(tab)} style={room.tab}>
           <Text style={[room.tabText, activeTab === tab ? room.activeTabText : {}]}>{tab}</Text>
         </TouchableOpacity>
       ));
@@ -84,7 +84,7 @@ const Room = () => {
                 <ScrollView 
                 ref={scrollViewRef} 
                 horizontal
-                // showsHorizontalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
                 // onScroll={handleScroll}
                 // contentContainerStyle={room.horizontalTab}
                 >
