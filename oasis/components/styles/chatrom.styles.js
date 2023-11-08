@@ -11,13 +11,15 @@ const chatroom = StyleSheet.create({
         width: 70, // Adjust the width as needed
         marginHorizontal: 5, // Adjust the margin as needed
       },
-      closeCross:{
-        color: 'grey',
-      fontSize: 25,
-      fontWeight: '100',
-      left: 10,
-      paddingBottom: 0,
-      paddingTop: 5,},
+
+
+      // closeCross:{
+      //   color: 'grey',
+      // fontSize: 25,
+      // fontWeight: '100',
+      // left: 10,
+      // paddingBottom: 0,
+      // paddingTop: 5,},
       chats:{
         color: 'grey',
         fontSize: 20
@@ -108,7 +110,7 @@ chat:{
   color: 'grey',
   fontSize: 20,
   paddingTop: 40,
-  paddingLeft: 20,
+  paddingLeft: 10,
 },
 chatOptions:{
   color: 'grey',

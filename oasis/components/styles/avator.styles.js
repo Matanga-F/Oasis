@@ -2,12 +2,11 @@ import { StyleSheet } from "react-native";
 
 const userAvator = StyleSheet.create({
     container:{
-        width: '96%',
-        margin: 'auto',
+        width: '80%',
         height: 120
       },
       innercontainer:{
-          margin: 'auto',
+        Width: "68%",
           flexDirection: 'row',
           justifyContent: 'space-between',
           marginBottom: 20,

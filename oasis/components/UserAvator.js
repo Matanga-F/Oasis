@@ -10,6 +10,7 @@ const UserAvator = ({ friend }) => {
     <View style={userAvator.container} >
       <FlatList
         data={friend}
+        showsVerticalScrollIndicator= {false}
         renderItem={({ item, index }) => {
           if (item.connection === "Connected") {
             return (
@@ -21,7 +22,7 @@ const UserAvator = ({ friend }) => {
 
                 <View>
                   <Text style={userAvator.userName}>{item.name}</Text>
-                  <Text style={userAvator.message}>{ item.messages[item.messages.length - 1].content}</Text>
+                  <Text style={userAvator.message}>Message display</Text>
                 </View>
 
                 <View>
