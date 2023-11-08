@@ -20,24 +20,24 @@ const AppNavigator = () => {
           }}
         /> */}
 
-      {/* <Stack.Screen
+      <Stack.Screen
           name="Room"
           component={Room}
           options={{
             animation: 'slide_from_bottom',
             headerShown: false,
           }}
-        /> */}
+        />
 
 
-    <Stack.Screen
+    {/* <Stack.Screen
               name="Video"
               component={ExpoVideoComponent}
               options={{
                 animation: 'slide_from_bottom',
                 headerShown: false,
               }}
-            />
+            /> */}
 
       </Stack.Navigator>
     </NavigationContainer>

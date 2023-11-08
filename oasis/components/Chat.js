@@ -1,13 +1,31 @@
-import { View, Text } from 'react-native'
-import React, {useState} from 'react'
+import { View, Text, TouchableOpacity, FlatList, Image } from 'react-native'
+import React, {useState, useContext, useEffect} from 'react'
 import chatroom from './styles/chatrom.styles';
-
+import { Ionicons } from '@expo/vector-icons';
+import { data } from '../contexts/handleData';
+import UserAvator from './UserAvator';
 const Chat = () => {
-    // const { user } = useContext(appContext);
-    const data = [1, 2, 3, 4, 5, 6, 7];
     const [wrapVisible, setWrapVisible] = useState(true);
     const [iconName, setIconName] = useState('close-outline');
+    const [users, setUsers] = useState([]);
   
+    useEffect(() => {
+      // Load the JSON data from your home directory
+      const fetchData = async () => {
+        try {
+          // Use the imported data array
+          setUsers(data);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      fetchData();
+    }, []);
+    const user = {
+      // uri: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60', 
+      uri: 'https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2ZpbGUlMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60'
+    }
     const slideAnimation = {
       from: { translateY: 0 },
       to: { translateY: wrapVisible ? 0 : -500 },
@@ -17,73 +35,55 @@ const Chat = () => {
   return (
     <View style={chatroom.container}>
         <View>
+            <View>
+              <TouchableOpacity onPress={() => setWrapVisible(false)}>
+                <Ionicons name='close-outline' size={18} style={chatroom.closeCross} />
+              </TouchableOpacity>
+            </View>
+            <View style={chatroom.rowContainer}>
+            <Text style={chatroom.text}>Follow some accounts to get started</Text>
+            <TouchableOpacity>
+              <Text style={chatroom.grid}>see all</Text>
+            </TouchableOpacity>
+          </View>
+
+          <FlatList
+          data={users}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item, index }) => (
+            <View style={chatroom.tab}>
+              <View>
+                <View>
+                  <TouchableOpacity>
+                    <Ionicons name='close-outline' style={chatroom.cross} />
+                  </TouchableOpacity>
+                </View>
+                <Image source={user} size={26} style={chatroom.useProfile} />
+                <Text style={chatroom.text}>
+                  {item.name}
+                  <Ionicons name='sunny-outline' size={13} style={chatroom.status} />
+                </Text>
+                <Text style={chatroom.recommended}>{item.recommended}</Text>
+                <TouchableOpacity style={chatroom.connect}>
+                  <Text style={chatroom.text}>{item.connection}</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          )}
+          keyExtractor={(item) => item._id}
+        />
+
+<View>
+            <Text style={chatroom.chat}>Chats</Text>
+            <UserAvator  friend = {users} />
+            <Text style={chatroom.chatOptions}>Tap and hold on a chat for more options</Text>
+          </View>
+        {/* <View style={chatroom.verticalBorder}></View>
+         <View style={chatroom.verticalBorder}></View> */}
 
         </View>
     </View>
-    // <View style={chats.container}>
-    //   <View style={chats.innerContainer}>
-
-    //     <ScrollView>
-          
-    //       {wrapVisible ? (
-    //       <View style={chats.wrap}>
-    //         <Animatable.View animation={slideAnimation}>
-    //           <View>
-    //             <TouchableOpacity onPress={() => setWrapVisible(false)}>
-    //               <Ionicons name='close-outline' style={chats.closeCross} />
-    //             </TouchableOpacity>
-    //             </View>
-    //         </Animatable.View>
-
-    //         <View style={chats.rowContainer}>
-    //         <Text style={chats.text}>Follow some accounts to get started</Text>
-    //         <TouchableOpacity>
-    //           <Text style={chats.grid}>see all</Text>
-    //         </TouchableOpacity>
-    //       </View>
-
-
-    //         <FlatList
-    //           data={data}
-    //           horizontal
-    //           showsHorizontalScrollIndicator={false}
-    //           renderItem={({ item, index }) => (
-    //             <View style={chats.tab}>
-    //               <View>
-    //                 <View>
-    //                   <TouchableOpacity>
-    //                     <Ionicons name='close-outline' style={chats.cross} />
-    //                   </TouchableOpacity>
-    //                 </View>
-    //                 <Image source={user} size={26} style={chats.useProfile} />
-    //                 <Text style={chats.text}>
-    //                   Zayne{' '}
-    //                   <Ionicons name='sunny-outline' size={13} style={chats.status} />
-    //                 </Text>
-    //                 <Text style={chats.recommended}>recommended</Text>
-    //                 <TouchableOpacity style={chats.connect}>
-    //                   <Text style={chats.text}>Connect</Text>
-    //                 </TouchableOpacity>
-    //               </View>
-    //             </View>
-    //           )}
-    //           keyExtractor={(item) => item.toString()}
-    //         />
-    //       </View>
-    //     ) : (
-    //       <TouchableOpacity onPress={() => setWrapVisible(true)}>
-    //         <Ionicons name='chevron-down-outline' style={chats.closeCross} />
-    //       </TouchableOpacity>
-    //     )}
-
-    //       <View>
-    //         <Text style={chats.chat}>Chats</Text>
-    //         <UserAvator />
-    //         <Text style={chats.chatOptions}>Tap and hold on a chat for more options</Text>
-    //       </View>
-    //     </ScrollView>
-    //   </View>
-    // </View>
   )
 }
 

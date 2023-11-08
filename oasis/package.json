@@ -26,7 +26,8 @@
     "react-native-video": "^5.2.1",
     "react-native-web": "~0.19.6",
     "expo-camera": "~13.4.4",
-    "expo-av": "~13.4.1"
+    "expo-av": "~13.4.1",
+    "@expo/vector-icons": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

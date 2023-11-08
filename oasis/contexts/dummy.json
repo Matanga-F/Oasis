@@ -1,0 +1,75 @@
+{
+    "users": [
+      {
+        "_id": "1",
+        "name": "Emma",
+        "status": "active",
+        "recommended": "yes",
+        "connection": "Connect"
+      },
+      {
+        "_id": "2",
+        "name": "Liam",
+        "status": "away",
+        "recommended": "no",
+        "connection": "Pending"
+      },
+      {
+        "_id": "3",
+        "name": "Olivia",
+        "status": "active",
+        "recommended": "yes",
+        "connection": "Connect"
+      },
+      {
+        "_id": "4",
+        "name": "Noah",
+        "status": "offline",
+        "recommended": "yes",
+        "connection": "pending"
+      },
+      {
+        "_id": "5",
+        "name": "Ava",
+        "status": "active",
+        "recommended": "no",
+        "connecttion": "Connected"
+      },
+      {
+        "_id": "6",
+        "name": "Sophia",
+        "status": "away",
+        "recommended": "yes",
+        "connection": "Connect"
+      },
+      {
+        "_id": "7",
+        "name": "Jackson",
+        "status": "active",
+        "recommended": "no",
+        "connecttion": "Pending"
+      },
+      {
+        "_id": "8",
+        "name": "Isabella",
+        "status": "offline",
+        "recommended": "yes",
+        "connection": "Rejected"
+      },
+      {
+        "_id": "9",
+        "name": "Lucas",
+        "status": "active",
+        "recommended": "no",
+        "connection": "Connect"
+      },
+      {
+        "_id": "10",
+        "name": "Mia",
+        "status": "away",
+        "recommended": "yes",
+        "connection": "Pending"
+      }
+    ]
+  }
+  

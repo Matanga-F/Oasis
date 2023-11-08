@@ -12,6 +12,244 @@ export const handleData = [{
 },
 ];
 
+export const data = [
+      {
+        "_id": "1",
+        "name": "Emma",
+        "status": "active",
+        "recommended": "yes",
+        "connection": "Connect"
+      },
+      {
+        "_id": "2",
+        "name": "Liam",
+        "status": "away",
+        "recommended": "no",
+        "connection": "Pending"
+      },
+      {
+        "_id": "3",
+        "name": "Olivia",
+        "status": "active",
+        "recommended": "yes",
+        "connection": "Connect"
+      },
+      {
+        "_id": "4",
+        "name": "Noah",
+        "status": "offline",
+        "recommended": "yes",
+        "connection": "pending"
+      },
+      {
+        "_id": "5",
+        "name": "Ava",
+        "status": "active",
+        "recommended": "no",
+        "connection": "Connected"
+      },
+      {
+        "_id": "6",
+        "name": "Sophia",
+        "status": "away",
+        "recommended": "yes",
+        "connection": "Connected",
+        "messages": [
+          {
+            "sender": "user1",
+            "content": "Hello!",
+            "timestamp": "2023-11-07T12:30:00Z"
+          },
+          {
+            "sender": "user2",
+            "content": "Hi there!",
+            "timestamp": "2023-11-07T12:35:00Z"
+          },
+          {
+            "sender": "user1",
+            "content": "How are you?",
+            "timestamp": "2023-11-07T12:40:00Z"
+          },
+          {
+            "sender": "user2",
+            "content": "I'm good, thanks!",
+            "timestamp": "2023-11-07T12:45:00Z"
+          }
+        ],
+      },
+      {
+        "_id": "7",
+        "name": "Jackson",
+        "status": "active",
+        "recommended": "no",
+        "connection": "Pending"
+      },
+      {
+        "_id": "8",
+        "name": "Isabella",
+        "status": "offline",
+        "recommended": "yes",
+        "connection": "Rejected"
+      },
+      {
+        "_id": "9",
+        "name": "Lucas",
+        "status": "active",
+        "recommended": "no",
+        "connection": "Connected",
+        "messages": [
+          {
+            "sender": "user1",
+            "content": "Hello!",
+            "timestamp": "2023-11-07T12:30:00Z"
+          },
+          {
+            "sender": "user2",
+            "content": "Hi there!",
+            "timestamp": "2023-11-07T12:35:00Z"
+          },
+          {
+            "sender": "user1",
+            "content": "How are you?",
+            "timestamp": "2023-11-07T12:40:00Z"
+          },
+          {
+            "sender": "user2",
+            "content": "I'm good, thanks!",
+            "timestamp": "2023-11-07T12:45:00Z"
+          }
+        ],
+      },
+      {
+        "_id": "10",
+        "name": "Mia",
+        "status": "away",
+        "recommended": "yes",
+        "connection": "Pending"
+      }
+
+]
+
+export const chats =  [
+  {
+    "id": "9",
+    "messages": [
+      {
+        "sender": "user1",
+        "content": "Hello!",
+        "timestamp": "2023-11-07T12:30:00Z"
+      },
+      {
+        "sender": "user2",
+        "content": "Hi there!",
+        "timestamp": "2023-11-07T12:35:00Z"
+      },
+      {
+        "sender": "user1",
+        "content": "How are you?",
+        "timestamp": "2023-11-07T12:40:00Z"
+      },
+      {
+        "sender": "user2",
+        "content": "I'm good, thanks!",
+        "timestamp": "2023-11-07T12:45:00Z"
+      }
+    ],
+    "contentShared": [
+      {
+        "sender": "user1",
+        "contentType": "image",
+        "contentURL": "https://example.com/image1.jpg",
+        "timestamp": "2023-11-07T12:50:00Z"
+      },
+      {
+        "sender": "user2",
+        "contentType": "text",
+        "content": "Check out this article: https://example.com/article",
+        "timestamp": "2023-11-07T12:55:00Z"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "messages": [
+      {
+        "sender": "user1",
+        "content": "Hello!",
+        "timestamp": "2023-11-07T12:30:00Z"
+      },
+      {
+        "sender": "user2",
+        "content": "Hi there!",
+        "timestamp": "2023-11-07T12:35:00Z"
+      },
+      {
+        "sender": "user1",
+        "content": "How are you?",
+        "timestamp": "2023-11-07T12:40:00Z"
+      },
+      {
+        "sender": "user2",
+        "content": "I'm good, thanks!",
+        "timestamp": "2023-11-07T12:45:00Z"
+      }
+    ],
+    "contentShared": [
+      {
+        "sender": "user1",
+        "contentType": "image",
+        "contentURL": "https://example.com/image1.jpg",
+        "timestamp": "2023-11-07T12:50:00Z"
+      },
+      {
+        "sender": "user2",
+        "contentType": "text",
+        "content": "Check out this article: https://example.com/article",
+        "timestamp": "2023-11-07T12:55:00Z"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "messages": [
+      {
+        "sender": "user1",
+        "content": "Hello!",
+        "timestamp": "2023-11-07T12:30:00Z"
+      },
+      {
+        "sender": "user2",
+        "content": "Hi there!",
+        "timestamp": "2023-11-07T12:35:00Z"
+      },
+      {
+        "sender": "user1",
+        "content": "How are you?",
+        "timestamp": "2023-11-07T12:40:00Z"
+      },
+      {
+        "sender": "user2",
+        "content": "I'm good, thanks!",
+        "timestamp": "2023-11-07T12:45:00Z"
+      }
+    ],
+    "contentShared": [
+      {
+        "sender": "user1",
+        "contentType": "image",
+        "contentURL": "https://example.com/image1.jpg",
+        "timestamp": "2023-11-07T12:50:00Z"
+      },
+      {
+        "sender": "user2",
+        "contentType": "text",
+        "content": "Check out this article: https://example.com/article",
+        "timestamp": "2023-11-07T12:55:00Z"
+      }
+    ]
+  }
+];
+
 export const details = [ 
   { header: 'Account Settings', content: 'Manage account password, Customize settings, Preferences' },
   { header: 'Activity and Content', content: 'Recent activitys,History content, Favoourite feed' },

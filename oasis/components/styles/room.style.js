@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-
+import { StyleSheet, Dimensions } from "react-native";
+const { width, height } = Dimensions.get('window');
 const room = StyleSheet.create({
     container: {
         flex: 1,
@@ -24,15 +24,18 @@ const room = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: 'rgba(34, 34, 33, .34)',
         color: 'lightgrey',
-        fontSize: 13,
-        fontWeight: "400"
+        fontSize: 14,
+        fontWeight: "400",
+        opacity: 1,
     },
     tabText:{
         paddingTop: 10,
-        color: 'grey',
-        fontSize: 13,
+        color: 'lightgrey',
+        fontSize: 14,
         padding: 10,
-        fontWeight: "400"
+        fontWeight: "400",
+        opacity: .68,
+        zIndex:999,
     },
     headerText: {
         color: 'grey',
@@ -41,6 +44,16 @@ const room = StyleSheet.create({
         textAlign: 'center',
         paddingLeft: 20
     },
+
+    innervideo:{flex : 1,
+      width: width,
+       height: height},
+       video: {
+        flex: 1,
+        width: "100%",
+        height: "100%",
+      },
       
+    
 });
 export default room;

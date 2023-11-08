@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Video } from 'expo-av';
+import { Video, ResizeMode } from 'expo-av';
 
 const ExpoVideoComponent = ({ videoSource }) => {
-  const videoRef = useRef(null);
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
 
   useEffect(() => {
     // Load and play the video when the component mounts
@@ -24,12 +25,7 @@ const ExpoVideoComponent = ({ videoSource }) => {
 
   return (
     <View style={styles.container}>
-      <Video
-        ref={videoRef}
-        style={styles.video}
-        resizeMode="cover"
-        useNativeControls
-      />
+     
     </View>
   );
 };
