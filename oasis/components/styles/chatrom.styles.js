@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 const chatroom = StyleSheet.create({
     container:{
+      width: "100%",
       justifyContent: 'center',
     },
 
@@ -26,11 +27,12 @@ const chatroom = StyleSheet.create({
       },
 
       rowContainer:{
+        width: "98%",
         flexDirection: 'row',
-   justifyContent: 'space-between',
-   alignItems: 'center',
-   marginTop: 20,
-   marginBottom: 10, // Adjust as needed
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: 20,
+        marginBottom: 10, // Adjust as needed
 },
 text:{
   color: 'lightgrey',
@@ -38,6 +40,12 @@ text:{
   zIndex: 999,
   fontWeight: "bold",
   padding: 5
+},
+header: {color: 'lightgrey',
+fontSize: 15,
+zIndex: 999,
+fontWeight: "bold",
+paddingLeft: 35
 },
 
 grid:{
@@ -65,34 +73,44 @@ tab:{
   zIndex: 999
 },
 cross:{
+  position: "absolute",
   color: 'grey',
   fontSize: 25,
   fontWeight: '100',
-  left: 90,
   paddingBottom: 0,
-  paddingTop: 5,
+  paddingTop: 2,
+  paddingLeft: 110,
 },
 useProfile:{
-  width: 80,
-  height: 80,
-  borderRadius: 40,
+  width: 120,
+  height: 120,
+  borderRadius: 20,
   borderColor: 'grey',
-  borderWidth: .4,
-  marginTop: 1,
-  marginLeft: 10
+  borderWidth: .3,
+  marginTop: 20,
+  zIndex: 999
+
 },
 status:{
-
-  color: 'blue',
-  zIndex: 999
+  width: 20,
+  height: 20,
+  zIndex: 999,
+  padding: 5,
 },
-recommended:{
-  color: 'grey',
-  fontSize:14,
-  fontWeight: '200',
-  paddingLeft: 10,
+check:{
+  width: 10,
+  height: 10,
+  zIndex: -999,
+  padding: 7,
+  paddingLeft: 10
+},
+// recommended:{
+//   color: 'grey',
+//   fontSize:14,
+//   fontWeight: '200',
+//   paddingLeft: 10,
 
-} ,
+// } ,
 connect: {
   width: 100,
   margin: 'auto',
@@ -107,6 +125,7 @@ connect: {
 },
 
 chat:{
+  height: "100%",
   color: 'grey',
   fontSize: 20,
   paddingTop: 40,

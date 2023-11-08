@@ -29,32 +29,35 @@ const Chat = () => {
     uri: 'https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2ZpbGUlMjBibGFja3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60'
   };
 
+
   const slideAnimation = {
     from: { translateY: 0 },
     to: { translateY: wrapVisible ? 0 : -500 },
     duration: 300,
   };
+  const verified = require("../asserts/images/verified.png");
+  const checking = require("../asserts/images/checked.png");
+
+
+
 
   return (
-    <View style={chatroom.container}>
-      <ScrollView
-        scrollEventThrottle={16}
-        onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], { useNativeDriver: false })}
-      >
+<View style={chatroom.container}>
         <View>
           <View>
             <TouchableOpacity onPress={() => setWrapVisible(false)}>
               <Ionicons name='close-outline' size={18} style={chatroom.closeCross} />
             </TouchableOpacity>
           </View>
-          <ScrollView>
           <View style={chatroom.rowContainer}>
-            <Text style={chatroom.text}>Follow some accounts to get started</Text>
+            <Text style={chatroom.header}>Discover friends</Text>
             <TouchableOpacity>
               <Text style={chatroom.grid}>see all</Text>
             </TouchableOpacity>
           </View>
+          <View>
 
+          </View>
           <FlatList
             data={users}
             horizontal
@@ -67,12 +70,13 @@ const Chat = () => {
                       <Ionicons name='close-outline' style={chatroom.cross} />
                     </TouchableOpacity>
                   </View>
-                  <Image source={user} size={26} style={chatroom.useProfile} />
+                  <Image source={{uri: item.userProfile}} size={26} style={chatroom.useProfile} />
                   <Text style={chatroom.text}>
                     {item.name}
-                    <Ionicons name='sunny-outline' size={13} style={chatroom.status} />
+                    {item.recommended ==="yes" ? <Image source={verified} size={13} style={chatroom.status} /> : <Image source={checking} size={9} style={chatroom.check} />}
+
                   </Text>
-                  <Text style={chatroom.recommended}>{item.recommended}</Text>
+                  {/* <Text style={chatroom.recommended}>{item.recommended}</Text> */}
                   <TouchableOpacity style={chatroom.connect}>
                     <Text style={chatroom.text}>{item.connection}</Text>
                   </TouchableOpacity>
@@ -81,7 +85,6 @@ const Chat = () => {
             )}
             keyExtractor={(item) => item._id}
           />
-          </ScrollView>
           
 
           <View>
@@ -90,8 +93,8 @@ const Chat = () => {
             <Text style={chatroom.chatOptions}>Tap and hold on a chat for more options</Text>
           </View>
         </View>
-      </ScrollView>
     </View>
+    
   );
 };
 

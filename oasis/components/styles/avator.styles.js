@@ -16,11 +16,12 @@ const userAvator = StyleSheet.create({
         width: 60,
         height: 60,
         borderRadius: 30,
-        borderColor: 'green',
+        // borderColor: 'green',
         borderWidth: .3,
         marginTop: 1,
         marginLeft: 10,
         paddingRight: 10,
+        zIndex: 999
     
       },
       userName:{

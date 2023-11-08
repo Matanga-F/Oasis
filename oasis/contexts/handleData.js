@@ -18,35 +18,41 @@ export const data = [
         "name": "Emma",
         "status": "active",
         "recommended": "yes",
-        "connection": "Connect"
+        "connection": "Connect",
+        "userProfile": "https://images.unsplash.com/photo-1620424037570-15137a4a562d?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         "_id": "2",
         "name": "Liam",
         "status": "away",
         "recommended": "no",
-        "connection": "Pending"
+        "connection": "Pending",
+        "userProfile": "https://images.unsplash.com/photo-1541453456074-d59763a931de?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
         "_id": "3",
         "name": "Olivia",
         "status": "active",
         "recommended": "yes",
-        "connection": "Connect"
+        "connection": "Connect",
+        "userProfile": "https://images.unsplash.com/photo-1496302662116-35cc4f36df92?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
       },
       {
         "_id": "4",
         "name": "Noah",
         "status": "offline",
         "recommended": "yes",
-        "connection": "pending"
+        "connection": "pending",
+        "userProfile": "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
         "_id": "5",
         "name": "Ava",
         "status": "active",
         "recommended": "no",
-        "connection": "Connected"
+        "connection": "Connected",
+        "userProfile": "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         "_id": "6",
@@ -54,6 +60,7 @@ export const data = [
         "status": "away",
         "recommended": "yes",
         "connection": "Connected",
+        "userProfile": "https://images.unsplash.com/photo-1554727242-741c14fa561c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "messages": [
           {
             "sender": "user1",
@@ -82,14 +89,16 @@ export const data = [
         "name": "Jackson",
         "status": "active",
         "recommended": "no",
-        "connection": "Pending"
+        "connection": "Pending",
+        "userProfile": "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1446&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
         "_id": "8",
         "name": "Isabella",
         "status": "offline",
         "recommended": "yes",
-        "connection": "Rejected"
+        "connection": "Rejected",
+        "userProfile": "https://images.unsplash.com/photo-1519419691348-3b3433c4c20e?q=80&w=1526&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         "_id": "9",
@@ -97,6 +106,7 @@ export const data = [
         "status": "active",
         "recommended": "no",
         "connection": "Connected",
+        "userProfile": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "messages": [
           {
             "sender": "user1",
@@ -125,7 +135,8 @@ export const data = [
         "name": "Mia",
         "status": "away",
         "recommended": "yes",
-        "connection": "Pending"
+        "connection": "Pending",
+        "userProfile": "https://images.unsplash.com/photo-1592621385645-e41659e8aabe?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       }
 
 ]

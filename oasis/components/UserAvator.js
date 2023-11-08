@@ -16,7 +16,7 @@ const UserAvator = ({ friend }) => {
             return (
               <View style={userAvator.innercontainer}>
                 <View>
-                  <Image source={user} style={userAvator.userAvator} />
+                  <Image source={{uri: item.userProfile}} style={userAvator.userAvator} />
                   <Ionicons name="" size={13} />
                 </View>
 
