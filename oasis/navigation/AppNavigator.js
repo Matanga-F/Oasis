@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // import LandingPage from '../components/landingPage';
 import Room from '../components/Room';
 import ExpoVideoComponent from '../components/Video';
+import Login from '../auth/Login';
 const Stack = createNativeStackNavigator();
 
 
@@ -19,15 +20,23 @@ const AppNavigator = () => {
             headerShown: false,
           }}
         /> */}
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            animation: 'slide_from_bottom',
+            headerShown: false,
+          }}
+        />
 
-      <Stack.Screen
+      {/* <Stack.Screen
           name="Room"
           component={Room}
           options={{
             animation: 'slide_from_bottom',
             headerShown: false,
           }}
-        />
+        /> */}
 
 
     {/* <Stack.Screen

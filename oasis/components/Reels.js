@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet} from 'react-native';
 import reel from './styles/reeld.style';
 import React, { useRef, useState, useEffect} from 'react';
-import { Video, ResizeMode } from 'expo-av';
+import { Video} from 'expo-av';
 
 const Reels = ({ videoSource }) => {
   const videoRef = useRef(null);
@@ -41,17 +41,17 @@ const Reels = ({ videoSource }) => {
       <View style={reel.innerContainer}>
           <Text style={reel.text}>Reels</Text>
           <View style={reel.innervideo}>
-              <Video 
+              {/* <Video 
               ref={video}
               style={reel.video}
               source={{
                 uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
               }}
               useNativeControls
-              resizeMode={ResizeMode.COVER}
+              resizeMode={"cover"}
               isLooping
               onPlaybackStatusUpdate={status => setStatus(() => status)}
-            />
+            /> */}
             </View>
           
       </View>
