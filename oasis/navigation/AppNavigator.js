@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Room from '../components/Room';
 import ExpoVideoComponent from '../components/Video';
 import Login from '../auth/Login';
+import Register from '../auth/Register';
 const Stack = createNativeStackNavigator();
 
 
@@ -20,9 +21,17 @@ const AppNavigator = () => {
             headerShown: false,
           }}
         /> */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Login"
           component={Login}
+          options={{
+            animation: 'slide_from_bottom',
+            headerShown: false,
+          }}
+        /> */}
+        <Stack.Screen
+          name="Register"
+          component={Register}
           options={{
             animation: 'slide_from_bottom',
             headerShown: false,

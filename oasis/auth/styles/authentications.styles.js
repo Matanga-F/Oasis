@@ -1,19 +1,17 @@
 import { StyleSheet, Dimensions} from "react-native";
+const { width, height } = Dimensions.get('window');
 
 const authentication = StyleSheet.create({
   container: {
-    flex: 1,
-    height: Dimensions.get('window').height,
-    marginTop: 30,
+    width: "100%",
   },
 
   innerContainer: {
     width: '100%',
-    height: Dimensions.get('window').height,
+    height: height,
     backgroundColor: 'transparent',
     backgroundColor: 'rgba(0, 0, 0, .6)',
-    // justifyContent: 'center',
-    // AlignItems: 'center',
+    // alignContent:"center"
   },
   content: {
     alignItems:'center',
@@ -30,7 +28,7 @@ const authentication = StyleSheet.create({
     padding: 10,
     color:  'white',
     fontSize: 95,
-    paddingTop: 60,
+    // paddingTop: 60,
     paddingLeft: 20,
     fontWeight: "bold"
   },
@@ -68,7 +66,7 @@ const authentication = StyleSheet.create({
       textAlign: 'center'},
 
     logo:{
-      marginTop: 60,
+      marginTop: 20,
       width: 25,
       height: 25,
       padding: 25,
@@ -80,16 +78,16 @@ const authentication = StyleSheet.create({
         padding: 2,
         textAlign: 'center'
       },
-    // text:{
-    //   marginTop: 10,
-    //   color: 'white',
-    //   fontSize: 25,
-    //   textAlign: 'center',
-    //   fontWeight: 'regular',
-    // },
-//     formConatiner:{
-//     alignSelf: 'center', 
-//   },
+//     // text:{
+//     //   marginTop: 10,
+//     //   color: 'white',
+//     //   fontSize: 25,
+//     //   textAlign: 'center',
+//     //   fontWeight: 'regular',
+//     // },
+// //     formConatiner:{
+// //     alignSelf: 'center', 
+// //   },
       
 
       forgetContainer :{
@@ -99,7 +97,7 @@ const authentication = StyleSheet.create({
         user: {color: 'lightgrey', position: 'absolute', left: 60, top: 10},
         eye: {color: 'lightgrey', position: 'absolute', right: -140, top: -40},
 
-        //  position: 'absolute', right: -28, top: 3},
+//         //  position: 'absolute', right: -28, top: 3},
 
 
           input: { 
@@ -107,7 +105,6 @@ const authentication = StyleSheet.create({
             margin: 'auto',
             height: 50,
             paddingLeft: 45,
-            marginLeft: 20,
             color: 'white',
             backgroundColor: 'rgba(0, 0, 0,  0.5)',
             padding: 5,
@@ -122,7 +119,6 @@ const authentication = StyleSheet.create({
           margin: 'auto',
           height: 50,
           paddingLeft: 40,
-          marginLeft: 20,
           color: 'white',
           backgroundColor: 'rgba(0, 0, 0,  0.5)',
           padding: 5,
@@ -137,7 +133,7 @@ const authentication = StyleSheet.create({
         },
         bottomContainer:{
           alignItems: 'center',
-          marginTop: 40,
+          marginTop: 10,
         },
         forgot:{
           paddingLeft: 200,
@@ -158,7 +154,7 @@ const authentication = StyleSheet.create({
     height: 40,
     borderRadius: 10,
     letterSpacing: 0.4,
-    marginTop: 40,
+    marginTop: 10,
     alignSelf: 'center', // Center the button horizontally
     justifyContent: 'center', // Center the button vertically
     textAlign: 'center',
@@ -166,22 +162,22 @@ const authentication = StyleSheet.create({
     color: 'white'
 
         },
-        loadingContainer: {
-          width: '100%',
-          height: Dimensions.get('window').height,
-          backgroundColor: 'transparent',
-          backgroundColor: 'rgba(0, 0, 0, 1)',
-          justifyContent: 'center',
-          AlignItems: 'center',
-          zIndex: 999,
-            },
-        loading:{
-          fontSize: 20,
-          fontWeight: "300",
-          marginBottom: 10,
-          color: 'white',
-          textAlign: 'center',
-        },
+//         loadingContainer: {
+//           width: '100%',
+//           height: Dimensions.get('window').height,
+//           backgroundColor: 'transparent',
+//           backgroundColor: 'rgba(0, 0, 0, 1)',
+//           justifyContent: 'center',
+//           AlignItems: 'center',
+//           zIndex: 999,
+//             },
+//         loading:{
+//           fontSize: 20,
+//           fontWeight: "300",
+//           marginBottom: 10,
+//           color: 'white',
+//           textAlign: 'center',
+//         },
 
 
         loginButton: {
@@ -191,20 +187,25 @@ const authentication = StyleSheet.create({
           alignItems: 'center',
           borderRadius: 10,
           letterSpacing: 0.4,
-          marginTop: 40,
+          marginTop: 20,
+        },
+        bottomContainer:{
+          alignItems: 'center',
+          marginTop: 10,
         },
         account: {
-          marginTop: 150,
+          marginTop: 50,
           color: 'white',
         },
         accountR: {
-          marginTop: 120,
+          marginTop: 0,
           color: 'white',
         },
         accountText: {
           color: 'lightblue',
           textAlign: 'center',
-          fontWeight: "bold"
+          fontWeight: "bold",
+          paddingBottom: 10,
         },
 
         horizontalBorder: {

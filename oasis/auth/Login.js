@@ -80,7 +80,7 @@ const lock = require("../asserts/images/password 1.gif")
 
                     </View>
 
-                    <View style={[authentication.inputContainer, { marginTop: 20}]}>
+                    <View style={[authentication.inputContainer, { marginTop: 10}]}>
             <Ionicons name="lock-closed-outline" size={26} style={authentication.user} />
             
 
@@ -101,7 +101,7 @@ const lock = require("../asserts/images/password 1.gif")
            <Ionicons name="eye-outline" size={26} style={authentication.eye} /> 
          }
        </TouchableOpacity>
-           </View>
+                    </View>
 
 
                 <View style={authentication.forgetContainer}>
@@ -142,11 +142,18 @@ const lock = require("../asserts/images/password 1.gif")
 
             </View>
           </View>
-            
-
-          
-
           </View>
+
+          <View style={authentication.account}>
+            <TouchableOpacity onPress={ handleRegister}>
+            <Text style={authentication.accountText} >Dont have an account?</Text>
+            </TouchableOpacity>
+            
+          </View>
+
+          {isLoading && <View style={authentication.loadingContainer}>
+          <Text style={authentication.loading}>Loading...</Text>
+          </View>}
 
                 
 
@@ -154,12 +161,7 @@ const lock = require("../asserts/images/password 1.gif")
 
                 
            
-          <View style={authentication.account}>
-            <TouchableOpacity onPress={ handleRegister}>
-            <Text style={authentication.accountText} >Dont have an account?</Text>
-            </TouchableOpacity>
-            
-          </View>
+          
             {/* Your other components */}
             </LinearGradient>
     
