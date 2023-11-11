@@ -80,7 +80,7 @@ const lock = require("../asserts/images/password 1.gif")
 
                     </View>
 
-                    <View style={[authentication.inputContainer, { marginTop: 10}]}>
+                    <View style={[authentication.inputContainer, { marginTop: 30}]}>
             <Ionicons name="lock-closed-outline" size={26} style={authentication.user} />
             
 

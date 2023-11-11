@@ -6,6 +6,7 @@ import Room from '../components/Room';
 import ExpoVideoComponent from '../components/Video';
 import Login from '../auth/Login';
 import Register from '../auth/Register';
+import LandingScreen from '../components/LandingPage';
 const Stack = createNativeStackNavigator();
 
 
@@ -13,22 +14,22 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      {/* <Stack.Screen
-          name="landingPage"
-          component={LandingPage}
+      <Stack.Screen
+          name="LandingPage"
+          component={LandingScreen}
           options={{
             animation: 'slide_from_bottom',
             headerShown: false,
           }}
-        /> */}
-        {/* <Stack.Screen
+        />
+        <Stack.Screen
           name="Login"
           component={Login}
           options={{
             animation: 'slide_from_bottom',
             headerShown: false,
           }}
-        /> */}
+        />
         <Stack.Screen
           name="Register"
           component={Register}

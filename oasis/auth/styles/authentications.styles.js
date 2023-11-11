@@ -4,6 +4,7 @@ const { width, height } = Dimensions.get('window');
 const authentication = StyleSheet.create({
   container: {
     width: "100%",
+    paddingTop: 30,
   },
 
   innerContainer: {
@@ -28,7 +29,7 @@ const authentication = StyleSheet.create({
     padding: 10,
     color:  'white',
     fontSize: 95,
-    // paddingTop: 60,
+    paddingTop: 60,
     paddingLeft: 20,
     fontWeight: "bold"
   },
@@ -94,7 +95,7 @@ const authentication = StyleSheet.create({
       left: 30
 
       },
-        user: {color: 'lightgrey', position: 'absolute', left: 60, top: 10},
+        user: {color: 'lightgrey', position: 'absolute', left: 50, top: 10},
         eye: {color: 'lightgrey', position: 'absolute', right: -140, top: -40},
 
 //         //  position: 'absolute', right: -28, top: 3},
@@ -154,7 +155,7 @@ const authentication = StyleSheet.create({
     height: 40,
     borderRadius: 10,
     letterSpacing: 0.4,
-    marginTop: 10,
+    marginTop: 40,
     alignSelf: 'center', // Center the button horizontally
     justifyContent: 'center', // Center the button vertically
     textAlign: 'center',
@@ -189,16 +190,12 @@ const authentication = StyleSheet.create({
           letterSpacing: 0.4,
           marginTop: 20,
         },
-        bottomContainer:{
-          alignItems: 'center',
-          marginTop: 10,
-        },
         account: {
           marginTop: 50,
           color: 'white',
         },
         accountR: {
-          marginTop: 0,
+          marginTop: 120,
           color: 'white',
         },
         accountText: {
